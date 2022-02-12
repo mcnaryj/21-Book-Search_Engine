@@ -1,4 +1,4 @@
-const { Book, User } = require('../models');
+const { User } = require('../models');
 
 const resolvers = {
     Query: {
@@ -11,10 +11,21 @@ const resolvers = {
         }
     },
 
-    Mutation: {
-        addBook: async (parent, { authors, description, bookId, image, link, title }) => {
-            return await Book.create({ authors, description, bookId, image, link, title })
-        },
 
-    }
+    Mutation: {
+        // we want to save a book
+        saveBook: async (parent, { bookInfo }, context) => {
+            if (context.user) {
+                const updatedUser = await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { savedBooks: bookInfo } },
+                    { new: true }
+                )
+                return updatedUser;
+            }
+
+        },
+    },
 }
+
+module.exports = resolvers;
