@@ -30,12 +30,12 @@ const typeDefs = gql`
 
     # shorthand for the saveBook mutation
     input BookInfo {
-    bookId: ID!
-    authors: [String]
-    description: String!
-    image: String
-    link: String
-    title: String! 
+      bookId: ID!
+      authors: [String]
+      description: String!
+      image: String
+      link: String
+      title: String! 
   }
 
 
