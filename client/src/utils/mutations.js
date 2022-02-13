@@ -14,6 +14,25 @@ export const ADD_USER = gql`
 `
 // we want SAVE_BOOK, where we use savedBooks and BookIinfo
 
+// REMOVE_BOOK, where we delete the book based on its id
+export const REMOVE_BOOK = gql`
+  mutation deleteBook(bookId: ID!) {
+    deleteBook(bookId: $bookId) {
+      _id
+      username
+      email
+      savedBooks {
+        authors
+        bookId
+        description
+        image
+        link
+        title
+      }
+    }
+  }
+`;
+// Which is also going to contain the info in saved books
 
 
 // LOGIN_USER
