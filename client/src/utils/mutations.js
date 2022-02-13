@@ -9,10 +9,25 @@ export const ADD_USER = gql`
       }
     }
   }
-}
-
-`
+`;
 // we want SAVE_BOOK, where we use savedBooks and BookIinfo
+export const ADD_BOOK = gql`
+  mutation saveBook(bookId: ID!) {
+    saveBook(bookId: $bookId) {
+      _id
+      username
+      email
+      savedBooks {
+        authors
+        bookId
+        description
+        image
+        link
+        title
+      }
+    }
+  }
+`;
 
 // REMOVE_BOOK, where we delete the book based on its id
 export const REMOVE_BOOK = gql`
