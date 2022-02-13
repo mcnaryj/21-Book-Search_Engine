@@ -46,7 +46,8 @@ SOFTWARE.
 
 ## Installation
 
-Download the files contained in the [React-Portfolio](https://github.com/mcnaryj/20-React-Portfolio) repository, either through Github or by making a clone of the repository and downloading it locally. Once the file is downloaded, open it with VS Code or a similar code editor with node js installed. From there, install the node package modules via npm i. Then, run npm run start to start the application. The page will then automatically load, how neat is that?
+Download the files contained in the [Book-Search-Engine](https://github.com/mcnaryj/21-Book-Search_Engine)
+Public repository, either through Github or by making a clone of the repository and downloading it locally. Once the file is downloaded, open it with VS Code or a similar code editor with node js installed. From there, install the node package modules via npm i. Then, run npm run start to start the application. The page will then automatically load, how neat is that?
 
 ## Usage
 
@@ -63,15 +64,11 @@ This application is intended for users who want to see what an amazing developer
 
 ## Screenshots
 
-![About Me Page](src/images/About-me.png)
-![Projects Page](src/images/Projects.png)
-![Resume Page](src/images/Resume_screenshot.png)
-![Contact Page](src/images/contact-form+footer.png)
+
 
 ## Notes
 
-React is cool, I guess. I don't enjoy CSS so this was a good time to revisit it and see my limitations, and the areas where I was able to progress a bit.
 
 ## Questions
-Please check out my [github repo](https://github.com/mcnaryj/20-React-Portfolio) for more questions on the methodology and what have you.
+Please check out my [github repo](https://github.com/mcnaryj/21-Book-Search_Engine) for more questions on the methodology and what have you.
 I can also be reached at jack.mcnary@gmail.com for direct requests.
