@@ -13,7 +13,7 @@ export const ADD_USER = gql`
 `;
 // we want SAVE_BOOK, where we use savedBooks and BookIinfo
 export const SAVE_BOOK = gql`
-  mutation saveBook(bookId: ID!) {
+  mutation saveBook($bookId: ID!) {
     saveBook(bookId: $bookId) {
       _id
       username
@@ -32,7 +32,7 @@ export const SAVE_BOOK = gql`
 
 // REMOVE_BOOK, where we delete the book based on its id
 export const REMOVE_BOOK = gql`
-  mutation deleteBook(bookId: ID!) {
+  mutation deleteBook($bookId: ID!) {
     deleteBook(bookId: $bookId) {
       _id
       username

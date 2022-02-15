@@ -11,7 +11,8 @@ const SavedBooks = () => {
 
   const userData = data?.me || {};
 
-  const [deleteBook, { err }] = useMutation(REMOVE_BOOK);
+  const [deleteBook, { error }] = useMutation(REMOVE_BOOK);
+
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
@@ -22,7 +23,7 @@ const SavedBooks = () => {
     }
 
     try {
-      const { data } = await handleDeleteBook({
+      const { data } = await deleteBook({
         variables: { bookId }
 
       });
