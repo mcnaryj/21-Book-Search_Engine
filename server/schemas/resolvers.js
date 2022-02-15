@@ -6,8 +6,8 @@ const resolvers = {
     Query: {
         getSingleUser: async (parent, args, context) => {
             if (context.user) {
-                const userInfo = await User.findOne({ _id: context.user._id }).select('-__v -password');
-                return userInfo;
+                const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
+                return userData;
             }
             throw new AuthenticationError('You must be logged in to see this good good.')
         }
@@ -22,11 +22,11 @@ const resolvers = {
             return { token, user };
         },
         // we want to save a book
-        saveBook: async (parent, { bookInfo }, context) => {
+        saveBook: async (parent, { bookData }, context) => {
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     { _id: context.user._id },
-                    { $push: { savedBooks: bookInfo } },
+                    { $push: { savedBooks: bookData } },
                     { new: true }
                 )
                 return updatedUser;

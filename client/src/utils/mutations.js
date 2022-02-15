@@ -13,8 +13,8 @@ export const ADD_USER = gql`
 `;
 // we want SAVE_BOOK, where we use savedBooks and BookIinfo
 export const SAVE_BOOK = gql`
-  mutation saveBook($bookId: ID!) {
-    saveBook(bookId: $bookId) {
+  mutation saveBook($bookData: BookInfo) {
+    saveBook(bookData: $bookData) {
       _id
       username
       email
@@ -58,7 +58,7 @@ export const LOGIN_USER = gql`
       token
       user {
         _id
-        name
+        username
       }
     }
   }
