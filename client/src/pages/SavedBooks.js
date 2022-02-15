@@ -4,7 +4,6 @@ import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap
 import Auth from '../utils/auth';
 import { REMOVE_BOOK } from '../utils/mutations';
 import { GET_USER } from '../utils/queries';
-import Auth from '../utils/auth';
 import { removeBookId, saveBookIds } from '../utils/localStorage';
 
 const SavedBooks = () => {
@@ -23,14 +22,12 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await deleteBook(bookId, token);
+      const { data } = await handleDeleteBook({
+        variables: { bookId }
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+      });
 
-      const updatedUser = await response.json();
-      setUserData(updatedUser);
+
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
