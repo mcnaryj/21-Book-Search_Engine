@@ -11,9 +11,9 @@ export const ADD_USER = gql`
     }
   }
 `;
-// we want SAVE_BOOK, where we use savedBooks and BookIinfo
+// we want SAVE_BOOK, where we use savedBooks and BookInfo
 export const SAVE_BOOK = gql`
-  mutation saveBook($bookData: BookInfo) {
+  mutation saveBook($bookData: BookInfo!) {
     saveBook(bookData: $bookData) {
       _id
       username
