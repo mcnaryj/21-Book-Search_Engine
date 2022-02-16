@@ -51,7 +51,7 @@ Public repository, either through Github or by making a clone of the repository 
 
 ## Usage
 
-This application is intended for users who want to see what an amazing developer I am.
+This application is intended for users who want to search for and save books in their very own special account.
 
 ## Contributing
 
@@ -62,12 +62,15 @@ This application is intended for users who want to see what an amazing developer
 [GITHUB](https://docs.github.com/en)<br>
 [VSC](https://code.visualstudio.com/)<br>
 
-## Screenshots
+## Demonstration
+
+The app is deployed at https://book-search-engine-jm.herokuapp.com/
+Enjoy!
 
 
 
 ## Notes
-
+Debugging just about ended me this one, but I got through it. Thank god.
 
 ## Questions
 Please check out my [github repo](https://github.com/mcnaryj/21-Book-Search_Engine) for more questions on the methodology and what have you.
