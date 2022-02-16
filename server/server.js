@@ -7,6 +7,11 @@ const db = require('./config/connection');
 
 const { authMiddleware } = require('./utils/auth');
 
+const port = process.env.PORT;
+Promise.resolve(app.listen(port)).then(() => {
+  console.log("Running!");
+});
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
