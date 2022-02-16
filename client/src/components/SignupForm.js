@@ -16,7 +16,7 @@ const SignupForm = () => {
 
   useEffect(() => {
     error ? setShowAlert(true) : setShowAlert(false);
-  }, [error])
+  }, [error]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -38,11 +38,10 @@ const SignupForm = () => {
         variables: { ...userFormData },
       });
 
-
       Auth.login(data.createUser.token);
     } catch (err) {
-      console.error(err);
-      setShowAlert(true);
+      ;
+
     }
 
     setUserFormData({

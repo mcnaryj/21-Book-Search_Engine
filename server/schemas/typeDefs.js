@@ -24,7 +24,7 @@ const typeDefs = gql`
   }
 
     type Query {
-      getSingleUser: User
+      me: User
   }
 
     # shorthand for the saveBook mutation
