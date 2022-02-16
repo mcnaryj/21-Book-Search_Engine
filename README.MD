@@ -47,7 +47,7 @@ SOFTWARE.
 ## Installation
 
 Download the files contained in the [Book-Search-Engine](https://github.com/mcnaryj/21-Book-Search_Engine)
-Public repository, either through Github or by making a clone of the repository and downloading it locally. Once the file is downloaded, open it with VS Code or a similar code editor with node js installed. From there, install the node package modules via npm i. Then, run npm run start to start the application. The page will then automatically load, how neat is that?
+Public repository, either through Github or by making a clone of the repository and downloading it locally. Once the file is downloaded, open it with VS Code or a similar code editor with node js installed. From there, install the node package modules via npm i. Then, run npm run develop to start the application. The page will then automatically load, how neat is that?
 
 ## Usage
 
